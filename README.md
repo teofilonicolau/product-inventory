@@ -41,6 +41,8 @@ cd product-inventory
  ```bash
   docker-compose up -d
 ```
+![image](https://github.com/user-attachments/assets/29d2d99a-66f4-402e-8e15-d559f9e57e3a)
+
 ### Passo 3: Configurar o Banco de Dados (sem Docker)
 Se não estiver usando Docker, configure seu PostgreSQL local e crie um banco de dados com as seguintes credenciais:
 
