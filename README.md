@@ -169,11 +169,36 @@ Body:
 - URL: http://localhost:8080/api/products/1
 
 - Método: DELETE
+-  Nota: Substitua 1 pelo ID real do produto que você deseja exclui
 
 - ![image](https://github.com/user-attachments/assets/9bb74452-880d-47a8-afef-3ea7afd2c524)
 
+## Persistência de Dados em JSON 
+### Os dados do inventário são salvos automaticamente em um arquivo JSON chamado products.json na raiz do diretório do projeto. Isso garante que os produtos não sejam perdidos ao encerrar a aplicação. Exemplo de conteúdo do arquivo products.json:
+ Body:
+```json
+  [
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "category": "Electronics",
+    "quantity": 10,
+    "price": 599.99
+  },
+  {
+    "id": 3,
+    "name": "Celular",
+    "category": "Electronics",
+    "quantity": 10,
+    "price": 999.99
+  }
+]
 
-- Nota: Substitua 1 pelo ID real do produto que você deseja exclui
+
+  ```
+
+
+
 ### Autor
 - Teofilo Nicolau
 
