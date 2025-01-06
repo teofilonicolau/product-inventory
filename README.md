@@ -67,48 +67,114 @@ Compile e execute a aplicação utilizando Maven:
   ./mvnw spring-boot:run
 
  ```
-### Passo 6: Testar a Aplicação
+## Passo 6: Testar a Aplicação
 A aplicação estará rodando em http://localhost:8080. Utilizei ferramentas como Postman para testar os endpoints da API.
 
-## Endpoints da API
-  Adicionar Produto
-  - URL: POST  / http://localhost:8080/api/products
+### Passo 3: Executar Testes no Postman
+- Para cada endpoint:
+
+- Abra o Postman.
+
+- Selecione o Método HTTP (GET, POST, PUT, DELETE).
+
+- Insira a URL do Endpoint.
+
+- Configure o Corpo da Requisição (Body), se necessário (para POST e PUT).
+
+- Clique em Send para enviar a requisição.
+
+- Verifique a Resposta na seção de resposta do Postman.
+
+### Endpoints da API
+  - Adicionar Produto (POST /api/products)
+  - URL: http://localhost:8080/api/products
+  - Método: POST:
     
-    ```json
-  {
+   
+     ```bash
+    {
      "name": "Smartphone",
      "category": "Electronics",
      "quantity": 10,
      "price": 599.99
-   }
+    }
+    ```
+     ![image](https://github.com/user-attachments/assets/a549ad6c-0884-45bb-85e1-eaf9fd404fd6)
 
-  ```
-## Listar Todos os Produtos
-URL: GET /api/products
-Buscar Produto por ID
-URL: GET /api/products/{id}
-Buscar Produto por Nome
-URL: GET /api/products/search?name={name}
-Filtrar Produtos por Categoria
-URL: GET /api/products/filter/category?category={category}
-Ordenar Produtos
-URL: GET /api/products/sort?sortBy={sortBy}&order={order}
-Atualizar Produto
-URL: PUT /api/products/{id}
+    
+  
+
+###  Listar Todos os Produtos (GET /api/products)
+
+- URL: http://localhost:8080/api/products
+- Método: GET
+- ![image](https://github.com/user-attachments/assets/8a8ec2e3-aec5-4592-9aa3-d66f9092f0c3)
+
+  
+### Buscar Produto por ID (GET /api/products/{id})
+- URL: http://localhost:8080/api/products/1}
+- Método: GET
+- Nota: Substitua 1 pelo ID real do produto que você deseja buscar
+- ![image](https://github.com/user-attachments/assets/f6142300-3976-429d-8895-cbcbac257357)
+
+
+### Buscar Produto por Nome (GET /api/products/search)
+- URL: http://localhost:8080/api/products/search?name=Smartphone
+- Método: GET
+- Query Params: name = Smartphone
+- ![image](https://github.com/user-attachments/assets/3aba32ad-32f3-4b92-be23-9e47ce9aa6f8)
+
+  
+### Filtrar Produtos por Categoria (GET /api/products/filter/category)
+
+- URL: http://localhost:8080/api/products/filter/category?category=Electronics
+- Método: GET
+- Query Params: category = Electronics
+- ![image](https://github.com/user-attachments/assets/72ae9423-6120-4577-8962-3d4a70bfbcc5)
+
+
+### Ordenar Produtos (GET /api/products/sort)
+- URL: http://localhost:8080/api/products/sort?sortBy=price&order=asc
+
+- Método: GET
+
+- Query Params:
+
+- sortBy = price
+
+- order = asc
+- ![image](https://github.com/user-attachments/assets/adce464c-353f-4d79-8fd7-7d83f6ae7f3f)
+ 
+
+### Atualizar Produto (PUT /api/products/{id})
+- URL: http://localhost:8080/api/products/1
+- Método: PUT
+- Body: Selecione raw e JSON, insira o seguinte JSON:
 Body:
-json
-Copiar código
-{
+```json
+  {
     "name": "Smartphone Updated",
     "category": "Electronics",
     "quantity": 15,
     "price": 579.99
 }
-Excluir Produto
-URL: DELETE /api/products/{id}
-Autor
-Teofilo Nicolau
-Copiar código
+
+  ```
+![image](https://github.com/user-attachments/assets/e8f724e4-358b-469e-94db-495c5a54d0be)
+
+
+### Excluir Produto (DELETE /api/products/{id})
+- URL: http://localhost:8080/api/products/1
+
+- Método: DELETE
+
+- ![image](https://github.com/user-attachments/assets/9bb74452-880d-47a8-afef-3ea7afd2c524)
+
+
+- Nota: Substitua 1 pelo ID real do produto que você deseja exclui
+### Autor
+- Teofilo Nicolau
+
 
 
 
